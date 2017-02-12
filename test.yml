@@ -1,0 +1,16 @@
+#Test playbook for Ansible role
+---
+- hosts: all
+  become: true
+  vars:
+    cluster_ip: 
+      - 172.17.0.2
+      - 172.17.0.3
+      - 172.17.0.4
+    conscience_ip: 172.17.0.2
+    redis_ip: 172.17.0.4
+    configure: false
+
+  roles:
+    - role_under_test
+...
