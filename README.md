@@ -1,5 +1,7 @@
 # Ansible role `openio-sds`
 
+[![Build Status](https://travis-ci.org/cdelgehier/ansible-role-openio-sds.svg?branch=master)](https://travis-ci.org/cdelgehier/ansible-role-openio-sds)
+
 An Ansible role for [OPENIO-SDS](http://docs.openio.io/install-guide-centos). Specifically, the responsibilities of this role are to:
 
 - add the openio repository
