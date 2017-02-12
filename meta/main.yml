@@ -125,7 +125,7 @@ galaxy_info:
   #  - 9.2
   #  - 9.3
   - name: Ubuntu
-  #  versions:
+    versions:
   #  - all
   #  - lucid
   #  - maverick
@@ -156,7 +156,7 @@ galaxy_info:
   #  - all
   #  - any
   - name: EL
-  #  versions:
+    versions:
   #  - all
   #  - 5
   #  - 6
