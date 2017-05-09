@@ -18,7 +18,7 @@ If you like/use this role, please consider giving it a star or reviewing it on A
 
 ## Requirements
 
-No specific requirements
+No specific requirement
 
 ## Role Variables
 
