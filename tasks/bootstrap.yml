@@ -27,7 +27,7 @@
   command: "{{ openio_zookeeper_bootstrap_cmd }} {{ openio_namespace }} {{ openio_zookeeper_bootstrap_options }}"
   when:
     - inventory_hostname == groups['openio_zk_cluster'][0]
-      and  openio_zk_status.rc != 0
+      and openio_zk_status.rc != 0
 
 - name: "Unlocking namespace {{ openio_namespace }}"
   command: "{{ openio_cli_path }} --oio-ns={{ openio_namespace }} cluster unlockall"
