@@ -1,3 +1,5 @@
+class {'gridinit': no_exec => true}
+
 class {'openiosds':}
 openiosds::namespace {'{{ openio_namespace }}':
   ns             => '{{ openio_namespace }}',
