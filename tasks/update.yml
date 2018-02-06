@@ -9,6 +9,14 @@
   register: puppet_result
   changed_when: puppet_result.rc == 2
 
+- name: Create gridinit run directory
+  file:
+    path: /run/gridinit
+    state: directory
+
+- name: "Start gridinit and services"
+  shell: "gridinit -d /etc/gridinit.conf && gridinit_cmd start {{openio_namespace}}"
+
 - name: "Restart conscience agent to update service list"
   shell: "gridinit_cmd restart $({{openio_gridinit_cmd}} status | \
           grep {{openio_namespace}} | grep conscienceagent | awk '{ print $1 }')"
