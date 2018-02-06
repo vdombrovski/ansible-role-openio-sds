@@ -14,8 +14,9 @@
     path: /run/gridinit
     state: directory
 
-- name: "Start gridinit and services"
+- name: "Start gridinit and services if not started"
   shell: "gridinit -d /etc/gridinit.conf && gridinit_cmd start @{{openio_namespace}}"
+  ignore_errors: True
 
 - name: "Restart conscience agent to update service list"
   shell: "gridinit_cmd restart $({{openio_gridinit_cmd}} status | \
