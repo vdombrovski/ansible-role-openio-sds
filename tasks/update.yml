@@ -15,7 +15,7 @@
     state: directory
 
 - name: "Start gridinit and services"
-  shell: "gridinit -d /etc/gridinit.conf && gridinit_cmd start {{openio_namespace}}"
+  shell: "gridinit -d /etc/gridinit.conf && gridinit_cmd start @{{openio_namespace}}"
 
 - name: "Restart conscience agent to update service list"
   shell: "gridinit_cmd restart $({{openio_gridinit_cmd}} status | \
