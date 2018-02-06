@@ -29,6 +29,7 @@
   delegate_to: "{{ groups['openio_conscience'][0] }}"
   when: openio_bootstrap != 'True'
   notify: "Assign rdir"
+  changed_when: True
 
 - name: "Run handlers"
   meta: flush_handlers
