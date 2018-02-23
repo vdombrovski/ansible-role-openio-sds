@@ -149,6 +149,10 @@ openiosds::oioswift {'oioswift-1':
   auth_system       => '{{ openio_swift_auth_system }}',
   region_name       => '{{ openio_swift_region_name }}',
   middleware_swift3 => {{ openio_swift_middleware_swift3 }},
+  {%- if openio_swift_middleware_containerhierarchy %}
+
+  middleware_containerhierarchy => true,
+  {%- endif %}
   {%- if openio_swift_tempauth_users %}
 
   tempauth_users   => {{ openio_swift_tempauth_users }},
