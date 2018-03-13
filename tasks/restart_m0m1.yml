@@ -1,4 +1,4 @@
-...
+---
 - name: "Restart meta0 meta1"
   changed_when: true
   debug:
@@ -27,4 +27,4 @@
   changed_when: true
   shell: "kill -9 {{ item }}"
   with_items: "{{ m0m1_pid_killed.results | select('failed') | map(attribute='item') | list }}"
----
+...
