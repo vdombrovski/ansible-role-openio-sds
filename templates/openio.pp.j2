@@ -121,6 +121,9 @@ openiosds::rawx {'rawx-{{ loop.index }}':
   ipaddress    => "{{ openio_network_private_ipaddress }}",
   port         => {{ 6200 + loop.index }},
   documentRoot => "{{ partition.mountpoint }}/{{ openio_namespace }}/rawx-{{ loop.index }}",
+  {%- if openio_rawx_accurate_location %}
+  location  => "${hostname}.{{ loop.index }}",
+  {%- endif %}
 }
 openiosds::rdir {'rdir-{{ loop.index }}':
   num       => {{ loop.index }},
