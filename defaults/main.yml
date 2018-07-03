@@ -21,6 +21,8 @@ openio_data_mounts:
 openio_metadata_mounts:
   - { mountpoint: "/var/lib/oio/sds" }
 
+openio_rawx_accurate_location: false
+
 #openio_puppet_manifest: '/etc/oio/sds'
 openio_puppet_manifest: '/root'
 
